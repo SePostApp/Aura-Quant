@@ -61,7 +61,6 @@
   .sec-head{margin-bottom:34px}
   .sec-head p{margin-top:12px;font-size:1.02rem}
 
-  /* ---------- Header ---------- */
   header{padding:20px 0}
   .brand-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .brand{display:flex;align-items:baseline;gap:10px}
@@ -69,7 +68,6 @@
   .brand-mark span{color:var(--accent)}
   .brand-sub{font-family:var(--font-mono);font-size:.72rem;color:var(--text-dimmer)}
 
-  /* ---------- Hero ---------- */
   .hero{border-top:none;padding-top:clamp(20px,6vw,52px)}
   .hero h1{font-size:clamp(2rem,5.2vw,3.25rem);max-width:17ch}
   .hero-lede{margin-top:20px;font-size:clamp(1rem,1.6vw,1.12rem);max-width:60ch}
@@ -110,7 +108,6 @@
   .btn:hover{background:#0046dd}
   .form-note{font-size:.75rem;color:var(--text-dimmer);margin-top:2px}
 
-  /* ---------- Education ---------- */
   .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:36px}
   @media (max-width:760px){.edu-grid{grid-template-columns:1fr}}
   .edu-card{border:1px solid var(--border);background:var(--surface);border-radius:var(--radius);padding:26px}
@@ -141,7 +138,6 @@
     line-height:1.4;
   }
 
-  /* ---------- Architecture pillars ---------- */
   .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
   @media (max-width:900px){.pillars{grid-template-columns:1fr}}
   .pillar{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px}
@@ -161,7 +157,6 @@
   @media (max-width:900px){.flow-row{display:none}}
   .flow-row span{font-family:var(--font-mono);font-size:.72rem;color:var(--text-dimmer)}
 
-  /* ---------- Validation / guardrails ---------- */
   .progress-wrap{margin-top:36px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px 24px}
   .progress-top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:12px}
   .progress-top .count{font-family:var(--font-mono);font-size:1.15rem;color:var(--text);font-weight:600}
@@ -177,7 +172,6 @@
   .guard-table tbody td:last-child{color:var(--text-dim);font-family:var(--font-mono);font-size:.83rem}
   .guard-table tbody tr:nth-child(odd){background:var(--surface-alt)}
 
-  /* ---------- Terminal log ---------- */
   .terminal{margin-top:32px;background:#050709;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
   .terminal-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--border);background:var(--surface)}
   .dot{width:9px;height:9px;border-radius:50%;background:var(--border)}
@@ -192,7 +186,6 @@
   .cursor{display:inline-block;width:7px;height:14px;background:var(--text-dim);vertical-align:-2px;animation:blink 1s steps(1) infinite}
   @keyframes blink{50%{opacity:0}}
 
-  /* ---------- FAQ ---------- */
   .faq{margin-top:32px;display:flex;flex-direction:column;gap:10px}
   .faq details{border:1px solid var(--border);border-radius:10px;background:var(--surface);padding:16px 18px}
   .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:600;font-size:.95rem}
@@ -201,7 +194,6 @@
   .faq details[open] summary::after{content:"–"}
   .faq p{margin-top:12px;font-size:.9rem;max-width:100%}
 
-  /* ---------- Footer ---------- */
   footer{padding:40px 0 60px}
   .disclaimer{font-size:.78rem;color:var(--text-dimmer);max-width:760px;line-height:1.7}
   .footer-bottom{margin-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.78rem;color:var(--text-dimmer)}
@@ -313,7 +305,7 @@
         <div class="pillar-params">
           <span class="param-chip">36 candle</span>
           <span class="param-chip">Analisis tren</span>
-          <span class="param-chip">Confidence ≥ 75%</span>
+          <span class="param-chip">Confidence ≥ 80%</span>
         </div>
       </div>
 
@@ -351,8 +343,8 @@
 
     <div class="progress-wrap">
       <div class="progress-top">
-        <span class="count"><span id="live-count">140</span> / <span id="target-count">1000</span> <small>transaksi terverifikasi</small></span>
-        <span class="count mono" id="live-pct">14%</span>
+        <span class="count"><span id="live-count">160</span> / <span id="target-count">1000</span> <small>transaksi terverifikasi</small></span>
+        <span class="count mono" id="live-pct">16%</span>
       </div>
       <div class="progress-track"><div class="progress-fill" id="live-fill" style="width:14%"></div></div>
       <p class="progress-caption">Seluruh data live, riwayat transaksi, dan akun investor akan dipublikasikan secara terbuka setelah ambang 1000 transaksi terverifikasi tercapai.</p>
@@ -422,8 +414,7 @@
 
 <script>
 (function(){
-  // ---- Countdown ----
-  var target = new Date("2026-09-31T00:00:00+07:00").getTime();
+  var target = new Date("2026-10-31T00:00:00+07:00").getTime();
   var elD = document.getElementById("cd-days");
   var elH = document.getElementById("cd-hours");
   var elM = document.getElementById("cd-mins");
@@ -446,7 +437,6 @@
   tick();
   setInterval(tick, 1000);
 
-  // ---- Waitlist form -> WhatsApp ----
   var form = document.getElementById("waitlistForm");
   var nameInput = document.getElementById("wl-name");
   var WA_NUMBER = "6289639737300";
@@ -472,17 +462,14 @@
     window.open(WA_URL, "_blank");
   });
 
-  // ---- Auto-Sync Live Stats dari Endpoint / G-Sheet ----
-  // Masukkan URL API publik (misal: Cloudflare Worker, Google Sheet JSON, atau GitHub Raw) di sini:
   var DATA_FEED_URL = ""; 
 
   function syncLiveStats() {
-    if(!DATA_FEED_URL) return; // Jika belum ada endpoint, gunakan nilai default HTML (136)
+    if(!DATA_FEED_URL) return;
 
     fetch(DATA_FEED_URL)
       .then(function(res){ return res.json(); })
       .then(function(data){
-        // Format data yang diharapkan: { total_trades: 142, target: 1000 }
         if(data && data.total_trades) {
           var current = data.total_trades;
           var targetTrades = data.target || 1000;
